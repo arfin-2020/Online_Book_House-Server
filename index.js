@@ -15,6 +15,9 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
 client.connect(err => {
   const productsCollection = client.db("onlineshopping").collection("books");
 
+  app.get('/',(req, res)=>{
+    req.send("working")
+  })
   app.get('/photosurl',(req, res)=>{
     productsCollection.find()
     .toArray((err,items)=>{
