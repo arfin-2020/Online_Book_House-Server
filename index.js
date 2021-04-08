@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const ObjectId = require('mongodb').ObjectId;
 const MongoClient = require('mongodb').MongoClient;
 const port = process.env.PORT || 5055
 const cors = require('cors')
@@ -23,7 +24,7 @@ client.connect(err => {
   })
 
   app.get('/order/:id',(req, res)=>{
-    productsCollection.find({id:req.params.id})
+    productsCollection.find({ _id: ObjectId(req.params.id) })
     .toArray((err,items)=>{
      const result= res.send(items[0]);
      
@@ -39,9 +40,15 @@ client.connect(err => {
       res.send(result.insertedCount > 0)
     })
   })
+
+   //Delete
+   app.delete("/delete/:id", (req, res) => {
+    productsCollection.deleteOne({ _id: ObjectId(req.params.id) })
+        .then(result => {
+          console.log("result",result);
+        })
 })
-app.get('/', (req, res) => {
-  res.send('Hello World!')
 })
+
 
 app.listen(port)
