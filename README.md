@@ -1,5 +1,24 @@
 # Project Name: Online Book House
 
- ## Here I am Using : MongoDB, Nodemon, Cors, Express, Dotenv etc
+
+## Using Technology:
+* Spinner in HomePage.
+* Dynamic Data From Server.
+* Firebase Google Authentication.
+* Private Router.
+* React-router-dom.
+* Bootstrap.
+* jwt-decode.
+* FontAwesome Icons.
+* MongoDB for server.
+* Cors
+* Nodemon
+* Express
+* Dotenv
+
+## live Preview Link : https://book-a10.web.app/
+
+
+ ## Here I am Using : MongoDB, , Cors, Express, Dotenv etc
 
   ## live Link : https://book-a10.web.app/
