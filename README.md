@@ -18,7 +18,3 @@
 
 ## live Preview Link : https://book-a10.web.app/
 
-
- ## Here I am Using : MongoDB, , Cors, Express, Dotenv etc
-
-  ## live Link : https://book-a10.web.app/
